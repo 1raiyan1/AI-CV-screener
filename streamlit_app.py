@@ -26,7 +26,7 @@ if st.button("🔍 Screen Resumes"):
             data = {"job_description": job_description, "api_key": api_key}
             
             try:
-                response = requests.post("http://localhost:8000/screen", files=files, data=data)
+                response = requests.post("https://ai-cv-screener-jn4y.onrender.com/screen", files=files, data=data)
                 
                 if response.status_code == 200:
                     results = response.json()["results"]
